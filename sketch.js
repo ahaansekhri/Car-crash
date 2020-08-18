@@ -1,6 +1,10 @@
-var car,wall,speed,weight,deformation;
+var car,wall,speed,weight,deformation,bang_sound;
 
-
+function preload(){
+  bang_sound = loadSound("bang.mp3");
+  
+  
+}
 function setup() {
   createCanvas(1600,400);
 
@@ -25,6 +29,7 @@ function draw() {
     if(abs(car.width/2 - wall.width/2) > wall.x - car.x){
       car.velocityX = 0;
       car.x = 1450;
+      bang_sound.play();
 
       if(deformation < 100){
         car.shapeColor = "green";
