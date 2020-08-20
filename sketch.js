@@ -1,7 +1,7 @@
 var car,wall,speed,weight,deformation,bang_sound;
 
 function preload(){
-  bang_sound = loadSound("bang.mp3");
+  bang_sound = loadSound("crash.mp3");
   
   
 }
